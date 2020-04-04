@@ -8,7 +8,8 @@ from tkinter import messagebox
 class cube(object):
     rows = 0
     w = 0
-    #pass is similar to js where it just skips the rest of the code block
+    #pass is used when a statement is required syntactically but you do not want any command or code to execute
+    #we are using pass as placeholders 
     def __init__( self,start,dirnx=1, dirny=0, color=(255,0,0) ) :
         pass
 
@@ -38,4 +39,27 @@ class snake(object):
         pass
 
 
+def drawGrid(w, rows, surface):
+    pass
 
+def redrawWindow(surface):
+    pass
+
+def randomSnack(rows, items):
+    pass
+
+def message_box(subject, content):
+    pass
+
+def main():
+    pass
+
+
+rows =
+w =
+h = 
+
+cube.rows = rows
+cube.w = = w
+
+main()
