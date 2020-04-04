@@ -40,10 +40,32 @@ class snake(object):
 
 
 def drawGrid(w, rows, surface):
-    pass
+    # divides w by rows and receives an int 
+    sizeBtwn = w // rows
+
+    x = 0
+    y = 0
+
+    for l in range(rows):
+        x = x + sizeBtwn
+        y = y + sizeBtwn
+
+        #this function draws lines across the board
+        #arguments => place where it is drawn, color, which value, and range
+        #vertical lines
+        pygame.draw.line(surface , (255,255,255), (x, 0), (x,w))
+        #horizontal lines
+        pygame.draw.line(surface , (255,255,255), (0, y), (x,w))
 
 def redrawWindow(surface):
-    pass
+    # gets the global variables rows, and width from the main function
+    global rows, width
+    #rgb color?
+    win.fill((0,0,0))
+    
+    drawGrid(width, rows, surface)
+    pygame.display.update()
+
 
 def randomSnack(rows, items):
     pass
@@ -52,13 +74,16 @@ def message_box(subject, content):
     pass
 
 def main():
+    #turns width and rows into global variables
+    global width, rows
+
     # create variables to be used in the window object in PyGame
     width = 500
-    height = 500
 
     #define what the row size is going to be
     rows = 20
-    win = pygame.display.set_mode((width, height))
+    #this sets the x,y but since it is a square we use the same variable
+    win = pygame.display.set_mode((width, width))
     
     #create a snake with first color and starting position
     s = snake((255,0,0), (10,10))
