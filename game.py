@@ -1,10 +1,10 @@
 import math
 import random
 import pygame
-import tkinter as tk 
-from tkinter import messagebox
+# import tkinter as tk 
+# from tkinter import messagebox
 
-#Define cube class
+# Define cube class
 class cube(object):
     rows = 0
     w = 0
@@ -56,6 +56,7 @@ def drawGrid(w, rows, surface):
         pygame.draw.line(surface , (255,255,255), (x, 0), (x,w))
         #horizontal lines //if (w,y) is switched to (x,w) it gets that cool effect 
         pygame.draw.line(surface , (255,255,255), (0, y), (w,y))
+ 
 
 def redrawWindow(surface):
     # gets the global variables rows, and width from the main function
@@ -86,11 +87,12 @@ def main():
     win = pygame.display.set_mode((width, width))
     
     #create a snake with first color and starting position
-    s = snake((255,0,0), (10,10))
+    # s = snake((255,0,0), (10,10))
     flag = True
 
     #built in object in pygame
     clock = pygame.time.Clock()
+    
 
     while flag:
 
@@ -102,9 +104,8 @@ def main():
 
         #redraws window this time win is the surface we are redrawing
         redrawWindow(win)
+
     pass
-
-
 # rows =
 # w =
 # h = 
@@ -113,3 +114,4 @@ def main():
 # cube.w = = w
 
 main()
+
