@@ -54,14 +54,14 @@ def drawGrid(w, rows, surface):
         #arguments => place where it is drawn, color, which value, and range
         #vertical lines
         pygame.draw.line(surface , (255,255,255), (x, 0), (x,w))
-        #horizontal lines
-        pygame.draw.line(surface , (255,255,255), (0, y), (x,w))
+        #horizontal lines //if (w,y) is switched to (x,w) it gets that cool effect 
+        pygame.draw.line(surface , (255,255,255), (0, y), (w,y))
 
 def redrawWindow(surface):
     # gets the global variables rows, and width from the main function
     global rows, width
     #rgb color?
-    win.fill((0,0,0))
+    surface.fill((0,0,0))
     
     drawGrid(width, rows, surface)
     pygame.display.update()
