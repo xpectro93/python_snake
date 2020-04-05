@@ -7,14 +7,18 @@ wn.bgcolor('black')
 
 wn.setup(width=1000, height=1000)
 
-pen = turtle.Pen()
-for y in range(-500,500,10):
-    pen.color('white')
-    pen.goto(y,y)
-    pen.speed(0)
-    print(y)
-
-
+pen = turtle.Turtle()
+pen.penup()
+pen.goto(0,400)
+pen.pensize(5)
+pen.speed(10)
+pen.color('red')
+pen.pendown()
+pen.goto(175,-75)
+pen.goto(-250,250)
+pen.goto(250,250)
+pen.goto(-175,-75)
+pen.goto(0,400)
 
 while True:
     wn.update()
