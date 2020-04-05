@@ -19,6 +19,15 @@ pen.goto(-250,250)
 pen.goto(250,250)
 pen.goto(-175,-75)
 pen.goto(0,400)
+pen.penup()
+pen.goto(0,375)
+pen.pendown()
+pen.circle(-238)
+
+pen.penup()
+pen.goto(0,-375)
+pen.pendown()
+pen.write("Made my Don Jon", align='center', font=('Courier', 24, "normal") )
 
 while True:
     wn.update()
