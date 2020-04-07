@@ -32,9 +32,11 @@ import random
 # pen.pendown()
 # pen.write("Made by: Don Jon", align='center', font=('Courier', 24, "normal") )
 loadWindow = turtle.Screen()
+loadWindow.setup(width=1000, height=1000)
+loadWindow.bgcolor("black")
 turtle.speed(0)
 turtle.colormode(255)
-turtle.pensize(1)
+turtle.pensize(3)
 
 def draw_grid(STEP,LENGTH):
     for i in range(-500, LENGTH, STEP):
@@ -42,14 +44,20 @@ def draw_grid(STEP,LENGTH):
         g = random.randint(0,255)
         b = random.randint(0,255)
         turtle.pencolor(r,g,b)
+        #Start -490, 500
+        # 
+        #changed  i top to bottom lines(horizontal)
         turtle.penup()
-        turtle.setpos(-LENGTH/2, LENGTH/2 - i)
-        turtle.pendown()
-        turtle.setpos(LENGTH/2, LENGTH/2 - i)
-        turtle.penup()
-        turtle.setpos(-LENGTH/2 + i, LENGTH/2)
+        turtle.setpos(-500, LENGTH/2)
         turtle.pendown()
         turtle.setpos(-LENGTH/2 + i, -LENGTH/2)
+
+
+        turtle.penup()
+        turtle.setpos(LENGTH/2, -500)
+        turtle.pendown()
+        turtle.setpos(-500, -LENGTH/2 + i)
+
     
 draw_grid(25,1000)
 while True:
